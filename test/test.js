@@ -4,7 +4,7 @@ let home = require('../Pages/HomePage');
 
 
 describe('Click On Login Button On HomePage',function() {
-    this.timeout(50000);
+    this.timeout(100000);
     
     it('First test case', async function(){
         await hooks.mochaHooks.beforeAll();
