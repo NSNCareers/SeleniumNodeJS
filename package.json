@@ -1,0 +1,24 @@
+{
+  "name": "seleniumnodejs",
+  "version": "1.0.0",
+  "description": "selenium javascript framework",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [
+    "selenium",
+    "mocha"
+  ],
+  "author": "Elvis",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.2.0",
+    "chromedriver": "^86.0.0",
+    "fs": "^0.0.1-security",
+    "selenium-webdriver": "^4.0.0-alpha.7"
+  },
+  "devDependencies": {
+    "mocha": "^8.2.1"
+  }
+}
