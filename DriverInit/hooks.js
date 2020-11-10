@@ -1,6 +1,6 @@
 let getDriver = require('./initDriver');
 let driver;
-let driverInstance = 'hub'
+let driverInstance = 'local'
 
 
 module.exports.webDriver={
@@ -28,7 +28,9 @@ module.exports.mochaHooks = {
             return driver;
 
         }else{
-            console.log('Could not initialize hub nor local driver instance');
+
+            var logs = await driver.manage().logs().get('driver')
+             console.log(logs);
         }
     },
 
