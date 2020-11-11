@@ -1,12 +1,12 @@
 let getDriver = require('./initDriver');
 let driver;
-let driverInstance = 'local'
+let driverInstance = 'hub'
 
 
 module.exports.webDriver={
 
      getDriverObject: 
-    async function () {
+     async function () {
         
         return await driver;
     }

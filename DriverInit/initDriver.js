@@ -3,10 +3,6 @@ const webdriver = require('selenium-webdriver'),
    By = webdriver.By,
    until = webdriver.until;
 
-var pref = new webdriver.logging.Preferences();
-pref.setLevel('browser', webdriver.logging.Level.ALL); 
-pref.setLevel('driver', webdriver.logging.Level.ALL);
-
 let driver;
 let HubIpAddress = 'http://167.172.59.97:4444/wd/hub';
 let capabilities = {
@@ -42,7 +38,7 @@ async function remoteDriver(){
         driver = await new  webdriver.Builder()
         .usingServer(HubIpAddress)
         .withCapabilities(capabilities)
-        .setLoggingPrefs(prefs)
+        .setLoggingPrefs()
         .build();
 
     } catch (error) {
