@@ -17,7 +17,7 @@ module.exports.loginPageObjects = {
             let driver = await getDriver.webDriver.getDriverObject();
             var element = await driver.findElement(By.css('input[type="email"]'));
             until.elementIsDisabled(element);
-            await element.sendkeys(email,Key.ENTER);
+            await element.sendKeys(email);
         },
 
     EnterUserPassword:
@@ -25,7 +25,7 @@ module.exports.loginPageObjects = {
             let driver = await getDriver.webDriver.getDriverObject();
             var element = await driver.findElement(By.css('input[id="Input_Password"]'));
             until.elementIsDisabled(element);
-            await element.sendkeys(password,Key.ENTER);
+            await element.sendKeys(password);
         },
 
     ClickOnLoginButton:

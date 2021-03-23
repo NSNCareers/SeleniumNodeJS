@@ -31,7 +31,7 @@ module.exports.profilePageObjects = {
     ClickOnUserEmail:
         async function() {
             let driver = await getDriver.webDriver.getDriverObject();
-            var element = await driver.findElement(By.css('a[title="Manage"]"]'));
+            var element = await driver.findElement(By.css('a[title="Manage"]'));
             until.elementIsDisabled(element);
             await element.click();
         },

@@ -12,10 +12,10 @@ module.exports.logoutPageObjects = {
             return bool;
         },
 
-    ClickOnLoginAppLink:
+    ClickOnHomeButton:
         async function() {
             let driver = await getDriver.webDriver.getDriverObject();
-            var element = await driver.findElement(By.css('a[class*="navbar-brand"]'));
+            var element = await driver.findElement(By.css('li>a[href="/"]'));
             until.elementIsDisabled(element);
             await element.click();
         },

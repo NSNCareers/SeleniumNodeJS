@@ -6,6 +6,7 @@ this file will be used to install project dependencies.
 proceed to provide the default information.
 * Run the below commands to install some necessary dependencies
 - npm install jest --save
+- npm install mocha --save
 - npm install selenium-webdriver --save
 - npm install fs --save
 - npm install chromedriver --save
