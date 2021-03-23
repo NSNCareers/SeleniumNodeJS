@@ -1,6 +1,6 @@
 let getDriver = require('./initDriver');
 let driver;
-let driverInstance = 'hub'
+let driverInstance = 'local'
 
 
 module.exports.webDriver={
@@ -19,7 +19,7 @@ module.exports.mochaHooks = {
     async function () {
         if (driverInstance=='local') {
              driver = await getDriver.initializeDriver();
-             await driver.get('http://prod.loginapp.nsncareers.com/');
+             await driver.get('http://qa.loginapp.nsncareers.com');
              return driver;
             
         } else if(driverInstance=='hub'){

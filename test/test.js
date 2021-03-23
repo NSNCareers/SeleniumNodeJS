@@ -8,7 +8,7 @@ describe('Click On Login Button On HomePage',function() {
     
     it('First test case', async function(){
         await hooks.mochaHooks.beforeAll();
-        await home.pageObjects.clickOnLoginButton();
+        await home.homePageObjects.clickOnLoginButton();
         var bool = await hooks.mochaHooks.afterAll();
         assert.ok(bool)
     }),

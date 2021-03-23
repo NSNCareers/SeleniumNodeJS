@@ -7,7 +7,7 @@ let driver;
 let HubIpAddress = 'http://167.172.59.97:4444/wd/hub';
 let capabilities = {
     'browserName' : 'chrome',
-    'browser_version' : '86.0.4240.75',
+    'browser_version' : '89.0.4389.72',
     'os' : 'LINUX',
     'resolution' : '1024x768',
     'name' : 'SampleTest'
@@ -19,7 +19,7 @@ async function initializeDriver(){
     try 
     { 
         driver = await new webdriver.Builder()
-        .forBrowser('chrome')
+        .forBrowser('firefox')
         .setLoggingPrefs()
         .build();
         var logs = await driver.manage().logs().get('driver')
